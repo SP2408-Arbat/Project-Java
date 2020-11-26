@@ -1,0 +1,5 @@
+insert into Student values(6803,'Shubham Purushottam Arbat','9146424646','Male','Purushottam','Worker','Anita','24/08/1999',20,'kunbi','Hindu','no','Pimpri','Pune','Maharastra','412105','2019','BSC Computer');
+
+insert into Subjects values('101','English-1',3,125,'COUNTING');
+
+insert into SSLC1 values(6803,'English-1','101',3,55,0,69);

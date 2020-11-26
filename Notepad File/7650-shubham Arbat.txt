@@ -1,0 +1,115 @@
+Seat No:7650
+Student Name:Shubham Purushottam Arbat
+Slip no:3
+Question 1:Write a PHP script which will return the followning component of the URL
+'http://www.example.com/php-example/index.php'
+List of Component Scheme Host,Path
+Expected O/p
+Schame:http
+Host:www.example.com
+Path:/php-example/index.php
+
+
+//Coding//
+url.php
+<?php
+    $url= 'http://www.example.com/php-example/index.php';
+    $info=parse_url($url);
+    
+   echo "<b>Schame:</b>".$info['scheme']."<br>";
+   echo "<b>Host:</b>".$info['host']."<br>";
+   echo "<b>Path:</b>".$info['path']."<br>";
+
+
+
+?>
+
+
+//output//
+Schame:http
+Host:www.example.com
+Path:/php-example/index.php
+
+
+Question 2:Write a PHP Script read Book.xml file and print specific content of a file using
+DOM Document Parser Book.xml File should contain following information at least 5 records with values
+BookInfo
+Book no,Book Name,Author Name,Prise,Year
+
+
+
+
+***//Code//**
+book.xml
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<BookInfo>
+	<Book Category="Technical">
+		<Book_No>123</Book_No>
+		<Book_Title>Ethical Hacking</Book_Title>
+		<Book_Author>Ankit Fadia</Book_Author>
+		<Book_Price>450</Book_Price>
+		<Book_PubYear>2006</Book_PubYear>
+	</Book>
+	<Book Category="Technical">
+		<Book_No>121</Book_No>
+		<Book_Title>Programming In PHP</Book_Title>
+		<Book_Author>Rasmus Lerdrof</Book_Author>
+		<Book_Price>350</Book_Price>
+		<Book_PubYear>1995</Book_PubYear>
+	</Book>
+	<Book Category="Technical">
+		<Book_No>121</Book_No>
+		<Book_Title>Theory Of Computation</Book_Title>
+		<Book_Author>Vivek Kulkarni</Book_Author>
+		<Book_Price>495</Book_Price>
+		<Book_PubYear>1995</Book_PubYear>
+	</Book>
+	<Book Category="Cooking">
+		<Book_No>456</Book_No>
+		<Book_Title>Indian Breakfast</Book_Title>
+		<Book_Author>Sanjeev Kapoor</Book_Author>
+		<Book_PubYear>2005</Book_PubYear>
+		<Book_Price>150</Book_Price>
+	</Book>
+	<Book Category="Yoga">
+		<Book_No>7866</Book_No>
+		<Book_Title>Daily Excercises</Book_Title>
+		<Book_Author>Ramdev Baba</Book_Author>
+		<Book_PubYear>2001</Book_PubYear>
+		<Book_Price>400</Book_Price>
+	</Book>
+</BookInfo>
+
+
+
+book.php
+
+<?php
+      $dom=new DomDocument();
+      $dom->load("book.xml");
+      $t=$dom->getElementsByTagName("Book_Title");
+      echo "<b>Book Name:</b>";
+      foreach($t as $node)
+      {
+        print $node->textContent."<br>";
+      }
+      $t=$dom->getElementsByTagName("Book_Author");
+      echo "<b>Book Author:</b>";
+      foreach($t as $node)
+      {
+        print $node->textContent."<br>";
+      }
+?>
+
+**//Output//**
+Book Name:Ethical Hacking
+Programming In PHP
+Theory Of Computation
+Indian Breakfast
+Daily Excercises
+Book Author:Ankit Fadia
+Rasmus Lerdrof
+Vivek Kulkarni
+Sanjeev Kapoor
+Ramdev Baba

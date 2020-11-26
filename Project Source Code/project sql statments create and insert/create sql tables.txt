@@ -1,0 +1,20 @@
+create table UAD(Username varchar(25) as primary key,Password varchar(15),Type varchar(15));
+
+create table Student(RollNo numeric primary key,SName varchar(50),Phno varchar(50),Sex varchar(50),FName varchar(50),Occupation varchar(50),MName varchar(50),DOB varchar(50),Age numeric,Caste varchar(50),Religion varchar(50),Hname varchar(50),City varchar(50),District varchar(50),State varchar(50),Pin varchar(50),Year varchar(50),Qualification varchar(50));
+create table Subjects(Subjectcode varchar(50) primary key,Subjectname varchar(50),Creditmark numeric,MaxMark numeric,Type varchar(50));
+
+create table SubjectAllocation(Subjectname varchar(50),Semester numeric,Batch varchar(15));
+
+create table PLUSTWO1(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table PLUSTWO2(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table PLUSTWO3(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table PLUSTWO4(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table PLUSTWO5(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+
+
+create table SSLC1(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table SSLC2(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table SSLC3(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table SSLC4(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table SSLC5(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
+create table SSLC6(RollNo numeric,SubjectName varchar(50),Subjectcode varchar(15),Internal numeric,Theory numeric,Practical numeric,Total numeric);
